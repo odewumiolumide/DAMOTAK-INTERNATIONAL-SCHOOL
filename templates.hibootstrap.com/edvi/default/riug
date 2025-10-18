@@ -1449,3 +1449,5 @@ document.getElementById("PrintResult").addEventListener("click", () => {
 // ---------------------------
 document.getElementById("backBtn").addEventListener("click", () => window.location.href = "result-list.html");
 document.getElementById("previewResult").addEventListener("click", () => window.location.href = "result preview.html");
+
+saved
