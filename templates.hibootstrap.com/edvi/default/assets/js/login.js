@@ -34,7 +34,7 @@ if (loginForm) {
     try {
       await signInWithEmailAndPassword(auth, email, password);
       sessionStorage.setItem("adminLoggedIn", "true");
-      window.location.href = "/Admin Page/wowdash.wowtheme7.com/demo/index.html";
+      window.location.href = "/Admin Page/wowdash.wowtheme7.com/demo/admin-home.html";
     } catch (error) {
       errorBox.textContent = "Invalid email or password.";
     }
@@ -45,6 +45,6 @@ if (loginForm) {
 onAuthStateChanged(auth, (user) => {
   if (user) {
     sessionStorage.setItem("adminLoggedIn", "true");
-    window.location.href = "/Admin Page/wowdash.wowtheme7.com/demo/index.html";
+    window.location.href = "/Admin Page/wowdash.wowtheme7.com/demo/admin-home.html";
   }
 });
