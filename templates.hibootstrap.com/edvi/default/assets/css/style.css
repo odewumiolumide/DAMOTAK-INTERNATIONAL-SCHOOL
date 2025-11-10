@@ -727,10 +727,13 @@ a.scroll-top i {
   color: #fff;
 }
 .slider-area .single-slider-bg-1 {
-  background: url(../images/home-bg.png);
+  background: url(../images/compound1.jpg); 
 }
 .slider-area .single-slider-bg-2 {
-  background: url(../images/home-bg2.png);
+  background: url(../images/compound3.jpg);
+}
+.slider-area .single-slider-bg-3 {
+  background: url(../images/compound5.jpg);
 }
 
 .service-area {
@@ -1487,7 +1490,7 @@ a.scroll-top i {
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 1;
-  background: url(../images/about-bg.png);
+  background: url(../images/compound5.jpg);
   background-attachment: fixed;
   height: 400px;
 }
