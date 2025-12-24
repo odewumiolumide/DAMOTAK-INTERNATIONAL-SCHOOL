@@ -90,6 +90,127 @@
     border: 1.5px solid #004aad;
   }
 }
+
+/* ===============================
+   THEME VARIABLES (Light / Dark)
+================================ */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #222222;
+    --card-text: #ffffff;          /* Text inside colored cards */
+    --shadow-color: rgba(0,0,0,0.08);
+}
+
+body.dark-mode {
+    --bg-color: #121212;
+    --text-color: #eaeaea;
+    --card-text: #ffffff;          /* Keep white for contrast */
+    --shadow-color: rgba(0,0,0,0.4);
+}
+
+/* ===============================
+   GENERAL SECTION
+================================ */
+.admission-area {
+    background: var(--bg-color);
+    padding: 60px 20px;
+    transition: background 0.3s ease;
+}
+
+.section-title {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #1f2d3d;
+}
+
+
+.section-title p {
+    color: #555;
+    font-size: 16px;
+}
+
+/* ===============================
+   ADMISSION STEPS GRID
+================================ */
+.admission-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* ===============================
+   STEP BOX
+================================ */
+.step-box {
+    padding: 25px;
+    border-radius: 14px;
+    color: var(--card-text);
+    position: relative;
+    box-shadow: 0 10px 25px var(--shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step-box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px var(--shadow-color);
+}
+
+/* Step Number */
+.step-number {
+    font-size: 42px;
+    font-weight: 700;
+    opacity: 0.18;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+/* Step Text */
+.step-box h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: var(--card-text);
+}
+
+.step-box p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--card-text);
+}
+
+/* ===============================
+   STEP COLORS (UNCHANGED – PROFESSIONAL)
+================================ */
+.step-1 { background: #1e88e5; }  /* Blue */
+.step-2 { background: #43a047; }  /* Green */
+.step-3 { background: #fb8c00; }  /* Orange */
+.step-4 { background: #8e24aa; }  /* Purple */
+.step-5 { background: #e53935; }  /* Red */
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+    .section-title h2 {
+        font-size: 26px;
+    }
+
+    .step-box {
+        padding: 22px;
+    }
+
+    .step-number {
+        font-size: 36px;
+    }
+}
+
+
     </style>
 
 
@@ -194,134 +315,64 @@
     <!-- End Page Title Area -->
 
     <!-- Terms & Conditions -->
-
-    <section class="admission-area">
-        <div class="container">
-            <div class="section-tittle">
-                <h2>Admission Guidelines</h2>
-<p>
-    At Damotak International School, we have developed a transparent and comprehensive admission process designed to ensure fair consideration for all prospective students. Our admission guidelines are as follows:
-</p>
-<ol>
-    <li><strong>Application Form:</strong> Complete the official application form, which is available on our website or at the school office.</li>
-    <li><strong>Document Submission:</strong> Submit all required documents, including previous academic records, a birth certificate, and proof of residence.</li>
-    <li><strong>Entrance Examination:</strong> Depending on the grade level, students may be required to undertake an entrance assessment to evaluate their academic preparedness.</li>
-    <li><strong>Notification:</strong> Parents will receive admission decisions via email within two weeks following the interview and assessment.</li>
-    <li><strong>Enrollment:</strong> Accepted students must finalize the enrollment process, including the payment of fees and submission of any additional documentation.</li>
-</ol>
-<p>
-    We encourage families to contact our admissions office for any questions or clarifications throughout the process. Our goal is to foster a welcoming and inclusive environment for all students.
-</p>
-            </div>
-            
-            <div class="admission-form">
-                <h2>Admission Form</h2>
-                <form id="admissionForm">
-                    <div class="row">
-                        <div class="form-group col-md-6">
-                            <label>First Name</label>
-                            <input type="text" class="form-control" id="firstName" placeholder="First Name" required />
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label>Last Name</label>
-                            <input type="text" class="form-control" id="lastName" placeholder="Last Name" required />
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label>Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="Email" required />
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label>Mobile</label>
-                            <input type="text" class="form-control" id="mobile" placeholder="Mobile" required />
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="inputState">Class Name</label>
-                            <select id="className" class="form-control" required>
-                                <option selected disabled>Enter Your Class</option>
-                                <option>Creche</option>
-                                <option>Nursery 1</option>
-                                <option>Nursery 2</option>
-                                <option>Primary 1</option>
-                                <option>Primary 2</option>
-                                <option>Primary 3</option>
-                                <option>Primary 4</option>
-                                <option>Primary 5</option>
-                                <option>JSS 1</option>
-                                <option>JSS 2</option>
-                                <option>JSS 3</option>
-                                <option>SSS 1</option>
-                                <option>SSS 2</option>
-                                <option>SSS 3</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label>Join Date</label>
-                            <input type="date" max="2095-12-31" class="form-control" id="joinDate" required />
-                        </div>
-                    </div>
-                    <div class="form-group col-md-12">
-                        <label for="inputAddress2">Address</label>
-                        <input type="text" class="form-control" id="address" placeholder="Address" required />
-                    </div>
-            
-                    <div class="row">
-                        <div class="form-group col-md-6">
-                            <label for="inputCity">City</label>
-                            <input type="text" class="form-control" id="city" required />
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="inputState">State</label>
-                            <select id="state" class="form-control" required>
-                                <option selected disabled>Select a State</option>
-                                <option>Abia</option>
-                                <option>Adamawa</option>
-                                <option>Akwa Ibom</option>
-                                <option>Anambra</option>
-                                <option>Bauchi</option>
-                                <option>Bayelsa</option>
-                                <option>Benue</option>
-                                <option>Borno</option>
-                                <option>Cross River</option>
-                                <option>Delta</option>
-                                <option>Ebonyi</option>
-                                <option>Ekiti</option>
-                                <option>Enugu</option>
-                                <option>Gombe</option>
-                                <option>Imo</option>
-                                <option>Jigawa</option>
-                                <option>Kaduna</option>
-                                <option>Kano</option>
-                                <option>Kogi</option>
-                                <option>Kwara</option>
-                                <option>Lagos</option>
-                                <option>Nasarawa</option>
-                                <option>Niger</option>
-                                <option>Ogun</option>
-                                <option>Ondo</option>
-                                <option>Osun</option>
-                                <option>Oyo</option>
-                                <option>Plateau</option>
-                                <option>Rivers</option>
-                                <option>Sabia</option>
-                                <option>Sokoto</option>
-                                <option>Taraba</option>
-                                <option>Yobe</option>
-                                <option>Zamfara</option>
-                            </select>
-                        </div>
-                    </div>
-            
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="gridCheck" required />
-                        <label class="form-check-label" for="gridCheck">
-                            Agree to all terms and conditions
-                        </label>
-                    </div>
-                    <button type="submit" class="box-btn">Registration</button>
-                </form>
-            </div>
+<br>
+<br>
+  <section class="admission-steps">
+    <div class="container">
+        <div class="section-title">
+            <h2>Admission Process</h2>
+            <p>
+                Admission into Damotak International School is carried out strictly at the school premises through a clear and well-structured process.
+            </p>
         </div>
-    </section>
+
+        <div class="steps-grid">
+
+            <div class="step-box step-1">
+                <span class="step-number">01</span>
+                <h3>Collection of Admission Form</h3>
+                <p>
+                    Parents or guardians are required to visit the school office to obtain and complete the official admission form.
+                </p>
+            </div>
+
+            <div class="step-box step-2">
+                <span class="step-number">02</span>
+                <h3>Submission of Documents</h3>
+                <p>
+                    Completed forms must be submitted at the school office along with the child’s previous school records, birth certificate, and passport photographs.
+                </p>
+            </div>
+
+            <div class="step-box step-3">
+                <span class="step-number">03</span>
+                <h3>Entrance Assessment</h3>
+                <p>
+                    Prospective students will be assessed in subjects suitable for their intended class to determine academic readiness.
+                </p>
+            </div>
+
+            <div class="step-box step-4">
+                <span class="step-number">04</span>
+                <h3>Admission Approval</h3>
+                <p>
+                    Successful candidates will be informed in person or through a phone call after the assessment has been reviewed.
+                </p>
+            </div>
+
+            <div class="step-box step-5">
+                <span class="step-number">05</span>
+                <h3>Registration & Resumption</h3>
+                <p>
+                    Admitted students complete registration by paying the required school fees and are given a resumption date.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
 
     <!-- Modal -->
 <div class="modal fade" id="notificationModal" tabindex="-1" aria-labelledby="notificationModalLabel" aria-hidden="true">
@@ -343,77 +394,14 @@
 
     <!-- End Terms & Conditions -->
 
-    <!-- Contact Area -->
-    <section class="home-contact-area pb-100">
-        <div class="container-fluid">
-            <div class="row align-items-center">
-                <div class="col-lg-6 ps-0">
-                    <div class="contact-img">
-                        <img src="assets/images/contact.png" alt="contact" />
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="home-contact-content">
-                        <h2>What Do You Want to Know?</h2>
-                        <form id="contactForm">
-                            <div class="row">
-                                <div class="col-lg-6 col-sm-6">
-                                    <div class="form-group">
-                                        <input type="text" name="name" id="name" class="form-control" required data-error="Please enter your name" placeholder="Your Name" />
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6 col-sm-6">
-                                    <div class="form-group">
-                                        <input type="email" name="email" id="email" class="form-control" required data-error="Please enter your email" placeholder="Your Email" />
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6 col-sm-6">
-                                    <div class="form-group">
-                                        <input type="text" name="phone_number" id="phone_number" required data-error="Please enter your number" class="form-control" placeholder="Your Phone" />
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6 col-sm-6">
-                                    <div class="form-group">
-                                        <input type="text" name="msg_subject" id="msg_subject" class="form-control" required data-error="Please enter your subject" placeholder="Your Subject" />
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="form-group">
-                                        <textarea name="message" class="form-control" id="message" cols="30" rows="5" required data-error="Write your message" placeholder="Your Message"></textarea>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-12 col-md-12">
-                                    <button type="submit" class="default-btn page-btn box-btn">
-                                                Send Message
-                                     </button>
-                                    <div id="msgSubmit" class="h3 text-center hidden"></div>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Contact Area -->
+   
 
     <!-- Footer Area -->
         <div class="footer-area">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4 col-md-6">
-                        <div class="footer-left">
+                        <div class="footer-left"> 
                             <a href="index.html" class="logo"><img src="assets/images/Damotak Logo.png" alt="Damotak Logo" class="main-logo"></a>
                             <p>
                                 Damotak International School is committed to academic excellence, offering a rigorous curriculum designed to challenge and inspire students.
@@ -455,22 +443,19 @@
                         <div class="footer-content fml-15 fml-20">
                             <h2>Find Us</h2>
                             <ul>
-                                 <li>
-                                    <a href="tel:08033880730"><i class="flaticon-next"></i> 08033880730 <br> 08082870544 <br> 08132687701</a>
+                                <li>
+                                     <p style="color: #fff;">Phone Numbers: 08033880730, 08082870544, 08132687701 </p>
+                  
                                 </li>
                                 
                                 <li>
-                                     <a href="Damotokint@gmail.com"><i  class="flaticon-next"></i>Damotokint@gmail.com</a>
+                                    <p style="color: #fff;">Email: damotokint@gmail.com</p>
                                 </li>
                                
                                 <li>
-                                    <a href="#">
-                                        <i class="flaticon-next"></i> NEW OBA ROAD, ILE-IDANDE AREA, OKE-ONITEA
-                                    </a>
-                                    
-                                    <a href="#">
-                                        <i class="flaticon-next"></i> OFF AYEKALE LAROTIMELIHINE,SCHEME. OSOGBO.
-                                    </a>
+                                    <p style="color: #fff;">Nusery & Primary: NEW OBA ROAD, ILE-IDANDE AREA, OKE-ONITEA </p>
+                                    <p style="color: #fff;">Junior & Senior Secondary: OFF AYEKALE LAROTIMELIHINE,SCHEME. OSOGBO. </p>
+                                        
                                 </li>
                             </ul>
                         </div>
@@ -495,7 +480,7 @@
                                 </li>
 
                                 <li>
-                                    <a href="contact.html"><i class="flaticon-next"></i> Why Us?</a>
+                                    <a href="contact.html"><i class="flaticon-next"></i> Contact?</a>
                                 </li>
                             </ul>
                         </div>
@@ -505,6 +490,7 @@
             </div>
         </div>
         <!-- End Footer Area -->
+
 
     <!-- Copy Area -->
     <div class="copy-area">

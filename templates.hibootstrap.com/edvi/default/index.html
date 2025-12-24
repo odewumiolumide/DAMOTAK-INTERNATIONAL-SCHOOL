@@ -36,7 +36,7 @@
 <meta property="og:description" content="Welcome to Damotak International School on Ayekale Road, Osogbo, Osun State. Discover our programs, admissions, and academic excellence.">
 <meta property="og:url" content="https://damotakinternationalschool.com.ng">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://damotakinternationalschool.com.ng/assets/images/Damotak Logo.png">
+<meta property="og:image" content="assets/images/Damotak Logo.png">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
@@ -108,7 +108,44 @@
     border: 1.5px solid #004aad;
   }
 }
+
+/* Map Section */
+.school-map {
+    padding: 60px 0;
+    background: #f9f9f9;
+}
+
+.map-title {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #222;
+}
+
+/* Responsive Map Wrapper */
+.map-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.map-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
     </style>
+
+    
 
     <body>
         <!-- Preloader -->
@@ -563,70 +600,25 @@ The highlight was a captivating performance where students showcased their creat
 
         
 
-        <!-- Contact Area -->
-        <section class="home-contact-area pb-100 pt-100">
-            <div class="container-fluid">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 ps-0">
-                        <div class="contact-img">
-                            <img src="assets/images/contact.png" alt="contact" />
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="home-contact-content">
-                            <h2>What Do You Want to Know?</h2>
-                            <form id="contactForm">
-                                <div class="row">
-                                    <div class="col-lg-6 col-sm-6">
-                                        <div class="form-group">
-                                            <input type="text" name="name" id="name" class="form-control" required data-error="Please enter your name" placeholder="Your Name" />
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
+       
 
-                                    <div class="col-lg-6 col-sm-6">
-                                        <div class="form-group">
-                                            <input type="email" name="email" id="email" class="form-control" required data-error="Please enter your email" placeholder="Your Email" />
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
+        <!-- Map Section -->
+<section class="school-map">
+    <div class="container">
+        <h2 class="map-title">Our School Location</h2>
 
-                                    <div class="col-lg-6 col-sm-6">
-                                        <div class="form-group">
-                                            <input type="text" name="phone_number" id="phone_number" required data-error="Please enter your number" class="form-control" placeholder="Your Phone" />
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
+        <div class="map-wrapper">
+            <iframe 
+                src="https://www.google.com/maps?q=NEW%20OBA%20ROAD,%20ILE-IDANDE%20AREA,%20OKE-ONITEA,%20Osogbo,%20Osun%20State&output=embed"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+</section>
+<!-- End Map Section -->
 
-                                    <div class="col-lg-6 col-sm-6">
-                                        <div class="form-group">
-                                            <input type="text" name="msg_subject" id="msg_subject" class="form-control" required data-error="Please enter your subject" placeholder="Your Subject" />
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-12 col-md-12">
-                                        <div class="form-group">
-                                            <textarea name="message" class="form-control" id="message" cols="30" rows="5" required data-error="Write your message" placeholder="Your Message"></textarea>
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-12 col-md-12">
-                                        <button type="submit" class="default-btn page-btn box-btn">
-                                                    Send Message
-                                        </button>
-                                        <div id="msgSubmit" class="h3 text-center hidden"></div>
-                                        <div class="clearfix"></div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End Contact Area -->
 
         <!-- Footer Area -->
         <div class="footer-area">
@@ -676,22 +668,18 @@ The highlight was a captivating performance where students showcased their creat
                             <h2>Find Us</h2>
                             <ul>
                                 <li>
-                                    <a href="tel:08033880730"><i class="flaticon-next"></i> 08033880730 <br> 08082870544 <br> 08132687701</a>
+                                     <p style="color: #fff;">Phone Numbers: 08033880730, 08082870544, 08132687701 </p>
+                  
                                 </li>
                                 
                                 <li>
-                                    <a href="Damotokint@gmail.com"><i  class="flaticon-next"></i>Damotokint@gmail.com</a>
-                                    
+                                    <p style="color: #fff;">Email: damotokint@gmail.com</p>
                                 </li>
                                
                                 <li>
-                                    <a href="#">
-                                        <i class="flaticon-next"></i> NEW OBA ROAD, ILE-IDANDE AREA, OKE-ONITEA
-                                    </a>
-
-                                    <a href="#">
-                                        <i class="flaticon-next"></i> OFF AYEKALE LAROTIMELIHINE,SCHEME. OSOGBO.
-                                    </a>
+                                    <p style="color: #fff;">Nusery & Primary: NEW OBA ROAD, ILE-IDANDE AREA, OKE-ONITEA </p>
+                                    <p style="color: #fff;">Junior & Senior Secondary: OFF AYEKALE LAROTIMELIHINE,SCHEME. OSOGBO. </p>
+                                        
                                 </li>
                             </ul>
                         </div>
@@ -716,7 +704,7 @@ The highlight was a captivating performance where students showcased their creat
                                 </li>
 
                                 <li>
-                                    <a href="contact.html"><i class="flaticon-next"></i> Why Us?</a>
+                                    <a href="contact.html"><i class="flaticon-next"></i> Contact?</a>
                                 </li>
                             </ul>
                         </div>
